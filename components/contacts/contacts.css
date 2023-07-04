@@ -1,0 +1,81 @@
+.contacts {
+    margin-top: 120px;
+    margin-bottom: 129px;
+    width: 1170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts__title {
+    text-transform: uppercase;
+    font-family: "Actay Wide";
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.contacts-wrapper {
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 90px;
+}
+
+.contacts-wrapper .location,
+.contacts-wrapper .email,
+.contacts-wrapper .phone-number{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.contacts-wrapper .location img,
+.contacts-wrapper .email img,
+.contacts-wrapper .phone-number img{
+    width: 32px;
+    height: 32px;
+    margin-right: 14px;
+}
+
+/*.contacts-wrapper .phone-number img{*/
+/*    margin: 0;*/
+/*}*/
+
+.social-network {
+    margin: 90px 0;
+}
+
+.social-network img{
+    margin-right: 9px;
+}
+
+.social-network img:last-child{
+    margin-right: 0;
+}
+
+.social-network img:hover{
+    cursor: pointer;
+    transition-delay: inherit;
+    transition: 0.3s;
+    scale: 1.2;
+}
+
+.contacts__get-request {
+    color: #FFFFFF;
+    background-color: #EC5D2B;
+    border-radius: 50px;
+    padding: 16px 24px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.contacts__get-request:hover {
+    transition-delay: inherit;
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: rgb(236, 93, 43, 0.6);
+}
+.contacts__get-request:active {
+    transition-delay: inherit;
+    transition: 0.3s;
+    background-color: rgb(236, 93, 43, 0.8);
+}

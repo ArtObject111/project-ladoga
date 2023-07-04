@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/header/header.css" rel="stylesheet" type="text/css" />
+    <link href="css/content/content.css" rel="stylesheet" type="text/css" />
+    <link href="components/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
+    <link href="components/swiper/reviews-swiper.css" rel="stylesheet" type="text/css" />
+    <link href="components/services/services.css" rel="stylesheet" type="text/css" />
+    <link href="components/advantages/advantages.css" rel="stylesheet" type="text/css" />
+    <link href="components/payAndDelivery/pay-delivery.css" rel="stylesheet" type="text/css" />
+    <link href="components/about/about.css" rel="stylesheet" type="text/css" />
+    <link href="components/price/price.css" rel="stylesheet" type="text/css" />
+    <link href="components/contacts/contacts.css" rel="stylesheet" type="text/css" />
+    <link href="css/footer/footer.css" rel="stylesheet" type="text/css" />
+    <link href="components/modal/modal.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<header>
+    <div class="header-wrapper">
+            <div class="logo">
+                <img src="assets/img/logo.png" alt="Логотип" title="Главная">
+            </div>
+            <div class="location">
+                <img src="assets/vector/location_marker.svg" alt="Маркер">
+                <span>г. Выборг, пр-т. Победы 8, оф. 30</span>
+            </div>
+            <div class="email">
+                <img src="assets/vector/chat.svg" alt="Маркер">
+                <span>info@lagoda-service.ru</span>
+            </div>
+            <div class="phone-number">
+                <img src="assets/vector/telephone.svg" alt="Маркер">
+                <span>8 (985) 622-98-33</span>
+            </div>
+            <div class="get-request">
+                ОСТАВИТЬ ЗАЯВКУ
+            </div>
+    </div>
+</header>
+<section class="content">
+    <div class="content-wrapper">
+        <div class="upper-block">
+            <div class="menu">
+                <div class="item-menu" onclick={document.querySelector(".services").scrollIntoView({behavior:"smooth"})}>НАШИ УСЛУГИ</div>
+                <div class="item-menu" onclick={document.querySelector(".advantages").scrollIntoView({behavior:"smooth"})}>ПРЕИМУЩЕСТВА</div>
+                <div class="item-menu" onclick={document.querySelector(".pay-delivery").scrollIntoView({behavior:"smooth"})}>ДОСТАВКА И ОПЛАТА</div>
+                <div class="item-menu" onclick={document.querySelector(".about").scrollIntoView({behavior:"smooth"})}>О КОМПАНИИ</div>
+                <div class="item-menu" onclick={document.querySelector(".about__licenses").scrollIntoView({behavior:"smooth"})}>ЛИЦЕНЗИИ И СЕРТИФИКАТЫ</div>
+                <div class="item-menu" onclick={document.querySelector(".price").scrollIntoView({behavior:"smooth"})}>ПРАЙСЫ НА ПРОДУКЦИЮ</div>
+                <div class="item-menu" onclick={document.querySelector(".contacts").scrollIntoView({behavior:"smooth"})}>КОНТАКТЫ</div>
+            </div>
+        </div>
+        <section class="reviews">
+            <div class="swiper-button-prev-uniq">
+                <img src="assets/vector/button-prev.svg" alt="Назад">
+            </div>
+            <div class="container">
+                <div class="swiper reviews-swiper">
+                    <div class="description">
+                        <div class="description-primary">
+                            <div class="upper">НОВЫЕ МЕТОДЫ</div>
+                            <div class="lower">КРЕПЛЕНИЯ ГРУЗОВ</div>
+                        </div>
+                        <div class="description-secondary">
+                            Наша задача - обеспечить простоту и удобство процессов перемещения и закрепления грузов
+                            на Вашем предприятии, используя передовые средства крепления груза и подъемно-транспортные приспособления.
+                        </div>
+                    </div>
+                    <a>
+                        <div onclick={document.querySelector('.footer-wrapper').scrollIntoView({behavior:"smooth"})} class="lower-get-request">
+                            ОСТАВИТЬ ЗАЯВКУ
+                        </div>
+                    </a>
+                    <div class="reviews-counter"></div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/img/reviews_1.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/reviews_2.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/reviews_3.png">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="swiper-button-next-uniq">
+                <img src="assets/vector/button-next.svg" alt="Вперед">
+            </div>
+        </section>
+        <section class="services">
+            <h1 class="services-description__header">
+                НАШИ УСЛУГИ
+            </h1>
+            <div class="services-description">
+                <div class="services-description__item">
+                    Выбор наиболее эффективных способов крепления груза к транспортному средству зависит от типа и состава
+                    перевозимого груза. Перевозчики должны оснащать транспортное средство соответствующим крепежным
+                    оборудованием для тех типов груза, которые они обычно перевозят. В случае генеральных грузов необходимо
+                    предусмотреть несколько различных типов крепежного оснащения.
+                </div>
+                <div class="services-description__item">
+                    Компания ООО «Лагода Сервис» является производителем текстильных креплений, которые прошли испытания,
+                    предусмотренные Техническими требованиями к средствам крепления грузов в вагонах и контейнерах с
+                    использованием текстильных лент, утвержденых Распоряжением РЖД №2557/р от 18.11.2019
+                </div>
+            </div>
+            <div class="services__group">
+                <div class="group__item">
+                    <img src="assets/img/Group_1.png" width="370px" height="197px">
+                    <div class="group_description__wrapper">
+                        <div class="group-description">РАЗРАБОТКА И ПОСТАВКА СИСТЕМ УДЕРЖАНИЯ ГРУЗА И СТЯЖНЫХ РЕМНЕЙ ДЛЯ АВТОТРАНСПОРТА</div>
+                        <div class="request-wrapper">
+                            <div class="group__get-request">
+                                ОСТАВИТЬ ЗАЯВКУ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group__item">
+                    <img src="assets/img/Group_2.png" width="370px" height="197px">
+                    <div class="group_description__wrapper">
+                        <div class="group-description">РАЗРАБОТКА И ПОСТАВКА ТЕКСТИЛЬНЫХ КРЕПЛЕНИЙ ДЛЯ ЗАКРЕПЛЕНИЯ ГРУЗОВ В Ж/Д ТРАНСПОРТЕ</div>
+                        <div class="request-wrapper">
+                            <div class="group__get-request">
+                                ОСТАВИТЬ ЗАЯВКУ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group__item">
+                    <img src="assets/img/Group_3.png" width="370px" height="197px">
+                    <div class="group_description__wrapper">
+                        <div class="group-description">РАЗРАБОТКА И ПОСТАВКА ТЕКСТИЛЬНЫХ КРЕПЛЕНИЙ  ДЛЯ ЗАКРЕПЛЕНИЯ ГРУЗОВ В МОРСКИХ СУДАХ</div>
+                        <div class="request-wrapper">
+                            <div class="group__get-request">
+                                ОСТАВИТЬ ЗАЯВКУ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group__item">
+                    <img src="assets/img/Group_4.png" width="370px" height="197px">
+                    <div class="group_description__wrapper">
+                        <div class="group-description">РАЗРАБОТКА И ПОСТАВКА ПРОКЛАДОЧНЫХ ЭЛЕМЕНТОВ,  РЕЗИНО-КОМПОЗИТНЫХ ИЗДЕЛИЙ</div>
+                        <div class="request-wrapper">
+                            <div class="group__get-request">
+                                ОСТАВИТЬ ЗАЯВКУ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group__item">
+                    <img src="assets/img/Group_5.png" width="370px" height="197px">
+                    <div class="group_description__wrapper">
+                        <div class="group-description">ПРОИЗВОДСТВО БУКСИРОВОЧНЫХ ТРОСОВ</div>
+                        <div class="request-wrapper">
+                            <div class="group__get-request">
+                                ОСТАВИТЬ ЗАЯВКУ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group__item">
+                    <img src="assets/img/Group_6.png" width="370px" height="197px">
+                    <div class="group_description__wrapper">
+                        <div class="group-description">РАЗРАБОТКА И ПОСТАВКА ТЕКСТИЛЬНЫХ СТРОПОВ</div>
+                        <div class="request-wrapper">
+                            <div class="group__get-request">
+                                ОСТАВИТЬ ЗАЯВКУ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="services__show-all">
+                <div class="show-all__inner">
+                    ПОКАЗАТЬ ВСЕ
+                </div>
+            </div>
+        </section>
+        <section class="advantages">
+            <div class="adv-strap">
+                <img src="assets/img/adv_strap.png" width="621px" height="289px">
+            </div>
+            <div class="advantages__header">ПРЕИМУЩЕСТВА</div>
+            <div class="advantages__group">
+                <div class="advantages__item">
+                    <img class="adv_icon" src="assets/vector/briefcase.svg" alt="vector_icon">
+                    <div class="advantage-number">01</div>
+                    <div class="item-name">ВЫСОКОЕ КАЧЕСТВО ПРОДУКЦИИ</div>
+                    <div class="item-description">
+                        Мы используем только надежные и прочные материалы, чтобы обеспечить долговечность и надежность нашей
+                        продукции.
+                    </div>
+                </div>
+                <div class="advantages__item">
+                    <img class="adv_icon" src="assets/vector/briefcase.svg" alt="vector_icon">
+                    <div class="advantage-number">02</div>
+                    <div class="item-name">СОСТВЕННЫЕ ПРОИЗВОДСТВЕННЫЕ МОЩНОСТИ</div>
+                    <div class="item-description">
+                        Мы стремимся к обеспечению полного цикла от переработки сырья до выпуска готовой продукции.
+                    </div>
+                </div>
+                <div class="advantages__item">
+                    <img class="adv_icon" src="assets/vector/briefcase.svg" alt="vector_icon">
+                    <div class="advantage-number">03</div>
+                    <div class="item-name">ИНДИВИДУАЛЬНЫЙ ПОДХОД</div>
+                    <div class="item-description">
+                        Мы готовы разработать индивидуальные решения и предоставить консультацию по выбору оптимального
+                        средства крепления, исходя из ваших конкретных задач и условий.
+                    </div>
+                </div>
+                <div class="advantages__item">
+                    <img class="adv_icon" src="assets/vector/briefcase.svg" alt="vector_icon">
+                    <div class="advantage-number">04</div>
+                    <div class="item-name">КОМАНДА ЭКСПЕРТОВ</div>
+                    <div class="item-description">
+                        Наша команда состоит из опытных специалистов, которые обладают глубокими знаниями в области
+                        крепежных систем.
+                    </div>
+                </div>
+            </div>
+            <div class="advantages__about">
+                <div class="about-description">
+                    Специалисты компании, изучив процессы перемещения и закрепления груза на Вашем предприятии,
+                    предложат уже имеющиеся решения, или разработанные новые средства крепления и перемещения груза с
+                    учётом особенностей работ на Вашем предприятии.Мы готовы предоставить Вам бесплатно опытные образцы
+                    изделий для испытаний на производственных площадках Вашего предприятия, а также провести необходимые
+                    консультации и обучение Ваших сотрудников. Разработать способы размещения и закрепления грузов,
+                    проекты МТУ (НТУ), выполнив их с учетом требований ТУ №ЦМ-943, а также Распоряжения ОАО «РЖД»
+                    №2557/р (с изм.) от 18.11.2019 и согласовать их при необходимости с перевозчиком.
+                    Работая с нами, вы получите надежное и удобное решение для крепления грузов, сэкономите время и
+                    деньги, а также минимизируете риски повреждения и потери грузов во время транспортировки.
+                    Обращайтесь к нам и мы поможем вам выбрать лучшее решение для вашего бизнеса!
+                </div>
+                <div class="picture-helmet">
+                    <img src="assets/img/helmet.png" alt="Изображение каски">
+                </div>
+            </div>
+        </section>
+        <section class="pay-delivery">
+            <div class="pay-delivery__header">ДОСТАВКА И ОПЛАТА</div>
+            <div class="pay-delivery__description">
+                Компания “Лагода Сервис” предлагает для Вашего удобства всевозможные способы доставки оплаты
+            </div>
+            <div class="pay-delivery__options-group">
+                <div class="pay-delivery__option">
+                    <div class="option-title">ТРАНСПОРТНАЯ КОМПАНИЯ</div>
+                    <div class="dlvr-option-description">
+                        Доставка готовой продукции ООО «ЛАДОГА СЕРВИС» осуществляется любым удобным для вас способом.
+                    </div>
+                    <div class="dlvr-option-additional">
+                        <img src="assets/vector/delivery/SDEK.svg">
+                        <img src="assets/vector/delivery/dpd.svg">
+                        <img src="assets/vector/delivery/pochta.svg">
+                        <img src="assets/vector/delivery/delovyi-linii.svg">
+                        <img src="assets/vector/delivery/PEK.svg">
+                    </div>
+                </div>
+                <div class="pay-delivery__option">
+                    <div class="option-title">СЧЕТ ДЛЯ ЮРИДИЧЕСКИХ ЛИЦ</div>
+                    <div class="dlvr-option-description">
+                        запросите счет для оплаты со счета ООО или ИП. Закрывающие документы мы пришлем Вам с заказом
+                        или по системе ЭДО
+                    </div>
+                    <div class="entity-option-additional">
+                        <div class="folder-icon"><img src="assets/vector/folder.svg"></div>
+                        <div class="request-invoice">
+                            ЗАПРОСИТЬ СЧЕТ
+                        </div>
+                    </div>
+                </div>
+                <div class="pay-delivery__option">
+                    <div class="option-title">САМОВЫЗОВ СО СКЛАДА</div>
+                    <div class="dlvr-option-description">
+                        Самовывоз возможен со складов наших производств.
+                    </div>
+                    <div class="dlvr-option-additional"></div>
+                </div>
+                <div class="pay-delivery__option">
+                    <div class="option-title">ОПЛАТА ЧЕРЕЗ ПРИЛОЖЕНИЯ БАНКОВ</div>
+                    <div class="dlvr-option-description">
+                        Нет карты под рукой? Оплачивайте через приложение Вашего банка или Систему Быстрых Платежей
+                    </div>
+                    <div class="banks-option-additional">
+                        <img src="assets/vector/banks/alpha.svg">
+                        <img src="assets/vector/banks/tinkoff.svg">
+                        <img src="assets/vector/banks/sber.svg">
+                        <img src="assets/vector/banks/sbp.svg">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="about__header">
+                <div class="about-description-wrapper">
+                    <div class="about__title">О КОМПАНИИ</div>
+                    <div class="about__description">
+                        Компания Лагода Сервис является разработчиком новых методов крепления грузов в различных типах
+                        транспорта, с использованием передовых средств крепления, а также подъемно-транспортных
+                        приспособлений.<br/>
+                        Мы стремимся к лидерству на рынке оказания услуг в области разработки решений, связанных с работами
+                        по перемещению, хранению и закреплению груза.<br/>
+                        Обладаем техническим отделом и командой квалифицированных специалистов что позволяет разработать
+                        необходимую документацию и внедрить совершенно новые методы крепления грузов в различных типах
+                        транспорта.
+                    </div>
+                </div>
+                <img width="570px" height="312px" src="assets/img/stock.png" alt="Изображение">
+            </div>
+            <div class="about__licenses">
+                <div class="licenses__description-wrapper">
+                    <div class="licenses__title">ЛИЦЕНЗИИ И <br/>СЕРТИФИКАТЫ</div>
+                    <div class="licenses__description">
+                        Инновационные средства креплений являются надежным средством крепления грузов, не повреждают их
+                        поверхность или упаковку. Их применение позволяет повысить безопасность перевозки грузов, и
+                        эффективность труда рабочих.
+                        Наша компания обладает всеми необходимыми протоклами и отчетами об испытаниях, а также
+                        сертификатами, подтверждающими качество и безопасность нашей продукции.
+                    </div>
+                </div>
+            </div>
+            <div class="licence">
+                <div class="swiper-button-prev-licence">
+                    <img src="assets/vector/button-prev-white.svg" alt="Назад">
+                </div>
+                <div class="slider-container">
+                    <div class="swiper licence-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img class="licence-img" src="assets/img/licence_1.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="licence-img" src="assets/img/licence_2.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="licence-img" src="assets/img/licence_3.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="licence-img" src="assets/img/licence_4.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="licence-img" src="assets/img/licence_5.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="licence-img" src="assets/img/licence_6.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="licence-img" src="assets/img/licence_7.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="licence-img" src="assets/img/licence_8.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="licence-img" src="assets/img/licence_9.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next-licence">
+                    <img src="assets/vector/button-next-white.svg" alt="Вперед">
+                </div>
+            </div>
+        </section>
+        <section class="price">
+            <div class="price_crane">
+                <img src="assets/img/price_cran.png" width="1140px" height="743px">
+            </div>
+            <div class="price__header-wrapper">
+                <div class="price__header">
+                    Прайсы на стандартную продукцию
+                </div>
+                <div class="arrow-wrapper">
+                    <div class="swiper-button-prev-price">
+                        <img src="assets/vector/button-prev-price.svg" alt="Назад">
+                    </div>
+                    <div class="swiper-button-next-price">
+                        <img src="assets/vector/button-next-price.svg" alt="Вперед">
+                    </div>
+                </div>
+            </div>
+            <div class="price__slider">
+                <div class="price-swiper__container">
+                    <div class="swiper price-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="price-block">
+                                    <div class="price-title">Прайс на стяжные ремни</div>
+                                    <div class="price-description">
+                                        Небольшой текст-описание на несколько строк. Небольшой текст-описание на
+                                        несколько строк. Небольшой текст-описание на несколько строк. Небольшой
+                                        текст-описание на несколько строк. Небольшой текст-описание на несколько строк.
+                                        Небольшой текст-описание на несколько строк.
+                                        Небольшой текст-описание на несколько строк. Небольшой текст-описание на
+                                        несколько строк. Небольшой текст-описание на несколько строк.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="price-block">
+                                    <div class="price-title">ПРАЙС НА БУКСИРОВОЧНЫЕ ТРОСЫ</div>
+                                    <div class="price-description">
+                                        Небольшой текст-описание на несколько строк. Небольшой текст-описание на
+                                        несколько строк. Небольшой текст-описание на несколько строк. Небольшой
+                                        текст-описание на несколько строк. Небольшой текст-описание на несколько строк.
+                                        Небольшой текст-описание на несколько строк.
+                                        Небольшой текст-описание на несколько строк. Небольшой текст-описание на
+                                        несколько строк. Небольшой текст-описание на несколько строк.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="price-block">
+                                    <div class="price-title">ПРАЙС НА ТЕКСТИЛЬНЫЕ СТРОПЫ</div>
+                                    <div class="price-description">
+                                        Небольшой текст-описание на несколько строк. Небольшой текст-описание на
+                                        несколько строк. Небольшой текст-описание на несколько строк. Небольшой
+                                        текст-описание на несколько строк. Небольшой текст-описание на несколько строк.
+                                        Небольшой текст-описание на несколько строк.
+                                        Небольшой текст-описание на несколько строк. Небольшой текст-описание на
+                                        несколько строк. Небольшой текст-описание на несколько строк.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="contacts-block">
+                <div class="contacts__title">КОНТАКТЫ</div>
+                <div class="contacts-wrapper">
+                    <div class="location">
+                        <img src="assets/vector/location_marker.svg" alt="Маркер">
+                        <span>г. Выборг, пр-т. Победы 8, оф. 30</span>
+                    </div>
+                    <div class="email">
+                        <img src="assets/vector/chat.svg" alt="Маркер">
+                        <span>info@lagoda-service.ru</span>
+                    </div>
+                    <div class="phone-number">
+                        <img src="assets/vector/telephone.svg" alt="Маркер">
+                        <span>8 (985) 622-98-33</span>
+                    </div>
+                </div>
+                <div class="social-network">
+                    <img src="assets/vector/social-net/VK.svg" alt="VK">
+                    <img src="assets/vector/social-net/whatsApp.svg" alt="WhatsApp">
+                    <img src="assets/vector/social-net/telegram.svg" alt="Telegram">
+                    <img src="assets/vector/social-net/viber.svg" alt="Viber">
+                </div>
+                <div class="contacts__get-request">ОСТАВИТЬ ЗАЯВКУ</div>
+            </div>
+            <div class="map">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5751687ceef4f3c8333704cd4fda34445a68066954b89e05d71da109e985cc56&amp;width=773&amp;height=484&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+        </section>
+    </div>
+</section>
+<!--<section class="modal">-->
+<!--    <div class="modal__body">-->
+<!--        <div class="modal_content">-->
+<!--            <a href="" class="modal__close">X</a>-->
+<!--            <div class="modal__title">Модальное окно №1</div><br/>-->
+<!--            <div class="modal__text">Небольшой текст-описание на несколько строк. Небольшой текст-описание на-->
+<!--                несколько строк. Небольшой текст-описание на несколько строк. Небольшой-->
+<!--                текст-описание на несколько строк. Небольшой текст-описание на несколько строк.-->
+<!--                Небольшой текст-описание на несколько строк.-->
+<!--                Небольшой текст-описание на несколько строк. Небольшой текст-описание на-->
+<!--                несколько строк. Небольшой текст-описание на несколько строк.</div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+<footer>
+    <div class="footer-wrapper">
+        <div class="footer__inner">
+            <div class="footer__first-column">
+                <img class="footer__logo" src="assets/vector/logo.svg" alt="Логотип">
+                <div class="rights">Все права защищены.<br/>
+                    Политика конфиденциальности</div>
+            </div>
+            <div class="footer__second-column">
+                <div class="footer__site-card">
+                    <div class="site-map__item">Наши услуги</div>
+                    <div class="site-map__item">Преимущества</div>
+                    <div class="site-map__item">Доставка и оплата</div>
+                    <div class="site-map__item">О компании</div>
+                </div>
+                <div class="footer__get-request">ОСТАВИТЬ ЗАЯВКУ</div>
+            </div>
+            <div class="footer__third-column">
+                <div class="footer__site-card">
+                    <div class="site-map__item">Лицензии и сертификаты</div>
+                    <div class="site-map__item">Прайсы на продукцию</div>
+                    <div class="site-map__item">Котнтакты</div>
+                </div>
+            </div>
+            <div class="footer__fourth-column">
+                <div class="footer__contacts">
+                    <div class="footer__contacts-item">
+                        <img src="assets/vector/location_marker.svg" alt="Маркер">
+                        <span>г. Выборг, пр-т. Победы 8, оф. 30</span>
+                    </div>
+                    <div class="footer__contacts-item">
+                        <img src="assets/vector/chat.svg" alt="Маркер">
+                        <span>info@lagoda-service.ru</span>
+                    </div>
+                    <div class="footer__contacts-item">
+                        <img src="assets/vector/telephone.svg" alt="Маркер">
+                        <span>8 (985) 622-98-33</span>
+                    </div>
+                </div>
+                <div class="footer__social-net">
+                    <img class="social_net__item" src="assets/vector/social-net/whatsApp-dark.svg" alt="WhatsApp">
+                    <img class="social_net__item" src="assets/vector/social-net/telegram-dark.svg" alt="Telegram">
+                    <img class="social_net__item" src="assets/vector/social-net/VK-dark.svg" alt="VK">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+<script src="components/swiper/swiper-bundle.min.js"></script>
+<script src="js/modal.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+
+</html>

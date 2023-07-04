@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Geologica;
+    src: url("../assets/font/Geologica.ttf");
+}
+
+@font-face {
+    font-family: 'Actay Wide';
+    src: url("../assets/font/actaywide-bold.otf");
+}
+
+body {
+    font-family: Geologica;
+    margin: 0;
+    background-color: #fcf3f0;
+}

@@ -1,0 +1,85 @@
+.about {
+    width: 1170px;
+    padding: 120px 135px;
+    background-image: url("../../assets/img/bck-about.png");
+    color: #FFFFFF;
+}
+
+.about__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+
+.about-description-wrapper {
+
+}
+
+.about__title {
+    font-family: "Actay Wide";
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.about__description {
+    margin-top: 30px;
+    width: 560px;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.licenses__description-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.licenses__title {
+    font-family: "Actay Wide";
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.licenses__description {
+    width: 560px;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.licence{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-button-prev-licence {
+    margin-right: 67px;
+}
+
+.swiper-button-next-licence {
+    margin-left: 67px;
+}
+
+.swiper-button-prev-licence img:hover,
+.swiper-button-next-licence img:hover {
+    cursor: pointer;
+    scale: 1.3;
+    transition: 0.3s;
+    transition-delay: inherit;
+}
+
+.swiper-button-prev-licence img:active,
+.swiper-button-next-licence img:active {
+    cursor: pointer;
+    scale: 1.5;
+    transition: 0.3s;
+}
+
+.slider-container {
+    width: 1204px;
+    height: 382px;
+}
+
+.licence-img {
+    margin: 0 15px;
+}

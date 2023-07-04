@@ -1,0 +1,129 @@
+/*@font-face {*/
+/*    font-family: 'Actay Wide';*/
+/*    src: url("../../assets/font/actaywide-bold.otf");*/
+/*}*/
+
+.container {
+    width: 1170px;
+    height: 502px;
+}
+
+.swiper-button-prev-uniq,
+.swiper-button-next-uniq{
+    /*width: 20px;*/
+    /*height: 32px;*/
+    /*position: relative;*/
+    /*top:-23px;*/
+    margin:48px;
+}
+
+/*Reviews Start*/
+.reviews {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.reviews-swiper {
+    padding-bottom: 46px;
+}
+
+/*.button-prev,*/
+/*.button-next {*/
+/*    width: 80px;*/
+/*    height: 40px;*/
+/*    background-color: #DCDCDC;*/
+/*    margin-bottom: 5px;*/
+/*}*/
+
+.reviews .swiper-button-prev,
+.reviews .swiper-button-next {
+    color: red;
+}
+
+.reviews .swiper-pagination-bullet {
+    height: 10px;
+    width: 10px;
+}
+
+.reviews .swiper-pagination-bullet-active {
+    background-color: #EC5D2B;
+}
+
+.reviews .swiper-button-prev-uniq img:hover,
+.reviews .swiper-button-next-uniq img:hover {
+    cursor: pointer;
+    scale: 1.3;
+    transition: 0.3s;
+    transition-delay: inherit;
+}
+
+.reviews .swiper-button-prev-uniq img:active,
+.reviews .swiper-button-next-uniq img:active {
+    cursor: pointer;
+    scale: 1.5;
+    transition: 0.3s;
+}
+
+.description {
+    position: absolute;
+    z-index: 2;
+    margin: 70px 0 0 71px;
+}
+
+.description-primary {
+    font-family: "Actay Wide";
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 24px;
+}
+
+.description-secondary {
+    width: 400px;
+    color: #FFFFFF;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.description-primary  .upper {
+    color: #EC5D2B;
+}
+
+.description-primary  .lower {
+    color: #FFF;
+}
+
+.lower-get-request {
+    position: absolute;
+    bottom: 115px;
+    left: 71px;
+    z-index: 2;
+    color: #FFFFFF;
+    background-color: #EC5D2B;
+    border-radius: 50px;
+    padding: 16px 24px;
+    font-size: 14px;
+}
+
+.lower-get-request:hover {
+    transition-delay: inherit;
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: rgb(236, 93, 43, 0.8);
+}
+.lower-get-request:active {
+    transition-delay: inherit;
+    transition: 0.3s;
+    background-color: rgb(236, 93, 43, 0.6);
+}
+
+.reviews-counter {
+    position: absolute;
+    bottom: 115px;
+    right: 71px;
+    z-index: 2;
+    color: #FFFFFF;
+    font-family: "Actay Wide";
+    font-weight: 700;
+    font-size: 40px;
+}

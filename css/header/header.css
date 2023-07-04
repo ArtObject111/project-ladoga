@@ -1,0 +1,63 @@
+header {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px #DCDCDC solid;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    width: 1170px;
+    justify-content: space-between;
+    padding: 18px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    width: 168px;
+    height: 56px;
+}
+
+.header-wrapper .location img,
+.header-wrapper .email img,
+.header-wrapper .phone-number img{
+    margin-right: 10px;
+}
+
+.location {
+    display: flex;
+}
+
+.email {
+    display: flex;
+}
+
+.phone-number {
+    display: flex;
+    font-weight: 600;
+}
+
+.get-request {
+    font-weight: 600;
+    font-size: 14px;
+    color: #EC5D2B;
+    background-color: rgb(236, 93, 43, 0.2);
+    padding: 16px 24px;
+    border-radius: 60px;
+}
+
+.get-request:hover {
+    cursor: pointer;
+    background-color: rgb(236, 93, 43, 0.1);
+    transition: 0.3s;
+}
+
+.get-request:active {
+    transition: 0.3s;
+    background-color: rgb(236, 93, 43, 0.4);
+}
