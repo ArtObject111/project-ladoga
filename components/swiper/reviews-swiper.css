@@ -1,19 +1,69 @@
-/*@font-face {*/
-/*    font-family: 'Actay Wide';*/
-/*    src: url("../../assets/font/actaywide-bold.otf");*/
-/*}*/
-
 .container {
     width: 1170px;
     height: 502px;
 }
 
+@media screen and (max-width: 767px){
+    .container {
+        width: 280px;
+        height: 422px;
+    }
+
+    .reviews-swiper .description{
+        margin-left: 20px;
+    }
+
+    .reviews-swiper .description .description-primary {
+        font-size: 20px;
+        margin-top: 202px;
+        margin-bottom: 15px;
+    }
+
+    .reviews-swiper .description .description-secondary {
+        width: 242px;
+        font-size: 10px;
+    }
+
+    .reviews-swiper .lower-get-request {
+        position: absolute;
+        bottom: 70px;
+        left: 20px;
+        z-index: 2;
+        padding: 12px 16px;
+        font-size: 10px;
+    }
+
+    .reviews-swiper .lower-get-request:hover {
+        transition-delay: inherit;
+        transition: 0.3s;
+        cursor: pointer;
+        background-color: rgb(236, 93, 43, 0.8);
+    }
+
+    .reviews-swiper .lower-get-request:active {
+        transition-delay: inherit;
+        transition: 0.3s;
+        background-color: rgb(236, 93, 43, 0.6);
+    }
+
+    .reviews-swiper .reviews-counter {
+        width: 33px;
+        height: 25px;
+        position: absolute;
+        bottom: 75px;
+        right: 20px;
+        z-index: 2;
+        color: #FFFFFF;
+        font-family: "Actay Wide";
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+
+}
+
 .swiper-button-prev-uniq,
 .swiper-button-next-uniq{
-    /*width: 20px;*/
-    /*height: 32px;*/
-    /*position: relative;*/
-    /*top:-23px;*/
     margin:48px;
 }
 
@@ -27,14 +77,6 @@
 .reviews-swiper {
     padding-bottom: 46px;
 }
-
-/*.button-prev,*/
-/*.button-next {*/
-/*    width: 80px;*/
-/*    height: 40px;*/
-/*    background-color: #DCDCDC;*/
-/*    margin-bottom: 5px;*/
-/*}*/
 
 .reviews .swiper-button-prev,
 .reviews .swiper-button-next {

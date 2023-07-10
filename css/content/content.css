@@ -6,7 +6,8 @@
 }
 
 .content-wrapper {
-    width: 1440px;
+    /*width: 1440px;*/
+    margin-top: 58px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -28,6 +29,12 @@
 
 .item-menu:hover {
     cursor: pointer;
-    scale: 1.01;
-    transition: 0.3s;
+    scale: 1.05;
+    transition: all 0.3s ease 0s;
+}
+
+@media screen and (max-width: 767px) {
+    .upper-block {
+        display: none;
+    }
 }

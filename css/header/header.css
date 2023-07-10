@@ -1,7 +1,16 @@
-header {
+.header {
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     border-bottom: 1px #DCDCDC solid;
+    transition: all 0.9s ease 0s;
+}
+
+.header.hidden {
+    top: -130%;
+    transition: all 2s ease 0s;
 }
 
 .header-wrapper {
@@ -12,6 +21,34 @@ header {
     padding: 18px;
     font-weight: 300;
     font-size: 14px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        border: none;
+        position: fixed;
+        z-index: 10;
+    }
+
+    .header.hidden {
+        top: -130%;
+        transition: all 2s ease 0s;
+    }
+
+    .header-wrapper {
+        width: 100vw;
+        background-color: #FFFFFF;
+        height: 58px;
+        z-index: 10;
+    }
+    .logo img {
+        width: 112px !important;
+        height: 38px !important;
+    }
+    .header-wrapper .header__item:not(:first-child) {
+        display: none;
+    }
 }
 
 .logo {
@@ -23,18 +60,15 @@ header {
     height: 56px;
 }
 
-.header-wrapper .location img,
-.header-wrapper .email img,
-.header-wrapper .phone-number img{
+.header__item:not(:first-child) img {
     margin-right: 10px;
+    width: 24px;
+    height: 24px;
 }
 
-.location {
+.header-wrapper .header__item {
     display: flex;
-}
-
-.email {
-    display: flex;
+    align-items: center;
 }
 
 .phone-number {
@@ -60,4 +94,54 @@ header {
 .get-request:active {
     transition: 0.3s;
     background-color: rgb(236, 93, 43, 0.4);
+}
+
+@media screen and (max-width: 767px) {
+    .header__burger {
+        width: 30px;
+        height: 18px;
+        position: relative;
+        margin-right: 20px;
+    }
+    .header__burger:hover {
+        cursor: pointer;
+    }
+    .header__burger span {
+        position: absolute;
+        background-color: #EC5D2B;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 8px;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger:before,
+    .header__burger:after{
+        content: '';
+        background-color: #EC5D2B;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger:before {
+        top: 0
+    }
+    .header__burger:after {
+        bottom: 0;
+    }
+
+    .header__burger.active:before {
+        transform: rotate(45deg);
+        top: 8px;
+    }
+    .header__burger.active:after {
+        transform: rotate(-45deg);
+        top: 8px;
+    }
+    .header__burger.active span {
+        display: none;
+        scale: none;
+    }
 }

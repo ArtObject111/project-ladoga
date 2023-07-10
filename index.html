@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang='ru'>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/header/header.css" rel="stylesheet" type="text/css" />
     <link href="css/content/content.css" rel="stylesheet" type="text/css" />
@@ -14,28 +16,71 @@
     <link href="components/contacts/contacts.css" rel="stylesheet" type="text/css" />
     <link href="css/footer/footer.css" rel="stylesheet" type="text/css" />
     <link href="components/modal/modal.css" rel="stylesheet" type="text/css" />
+    <link href="components/mobile-menu/mobile-menu.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<header>
+<header class="header">
     <div class="header-wrapper">
-            <div class="logo">
-                <img src="assets/img/logo.png" alt="Логотип" title="Главная">
+        <div class="header__item logo">
+            <img src="assets/img/logo.png" alt="Логотип" title="Главная">
+        </div>
+        <div class="header__item">
+            <img src="assets/vector/location_marker.svg" alt="Маркер">
+            <span>г. Выборг, пр-т. Победы 8, оф. 30</span>
+        </div>
+        <div class="header__item">
+            <img src="assets/vector/chat.svg" alt="Маркер">
+            <span>info@lagoda-service.ru</span>
+        </div>
+        <div class="header__item phone-number">
+            <img src="assets/vector/telephone.svg" alt="Маркер">
+            <span>8 (985) 622-98-33</span>
+        </div>
+        <div class="header__item get-request">
+            ОСТАВИТЬ ЗАЯВКУ
+        </div>
+        <div class="header__burger"><span></span></div>
+    </div>
+    <div class="wrapper-menu">
+        <section class="mobile__menu">
+            <div class="menu__bar">
+                <div class="menu__bar-block">
+                    <div class="mobile__item-menu" onclick={document.querySelector(".services").scrollIntoView({behavior:"smooth"})}>НАШИ УСЛУГИ</div>
+                    <div class="mobile__item-menu" onclick={document.querySelector(".advantages").scrollIntoView({behavior:"smooth"})}>ПРЕИМУЩЕСТВА</div>
+                    <div class="mobile__item-menu" onclick={document.querySelector(".pay-delivery").scrollIntoView({behavior:"smooth"})}>ДОСТАВКА И ОПЛАТА</div>
+                    <div class="mobile__item-menu" onclick={document.querySelector(".about").scrollIntoView({behavior:"smooth"})}>О КОМПАНИИ</div>
+                </div>
+                <div class="menu__bar-block">
+                    <div class="mobile__item-menu" onclick={document.querySelector(".about__licenses").scrollIntoView({behavior:"smooth"})}>ЛИЦЕНЗИИ И СЕРТИФИКАТЫ</div>
+                    <div class="mobile__item-menu" onclick={document.querySelector(".price").scrollIntoView({behavior:"smooth"})}>ПРАЙСЫ НА ПРОДУКЦИЮ</div>
+                    <div class="mobile__item-menu" onclick={document.querySelector(".contacts").scrollIntoView({behavior:"smooth"})}>КОНТАКТЫ</div>
+                </div>
             </div>
-            <div class="location">
-                <img src="assets/vector/location_marker.svg" alt="Маркер">
-                <span>г. Выборг, пр-т. Победы 8, оф. 30</span>
+            <div class="menu__contacts">
+                <div class="menu__contacts-item">
+                    <img src="assets/vector/location_marker.svg" alt="Маркер">
+                    <span>г. Выборг, пр-т. Победы 8, оф. 30</span>
+                </div>
+                <div class="menu__contacts-item">
+                    <img src="assets/vector/chat.svg" alt="Маркер">
+                    <span>info@lagoda-service.ru</span>
+                </div>
+                <div class="menu__contacts-item">
+                    <img src="assets/vector/telephone.svg" alt="Маркер">
+                    <span>8 (985) 622-98-33</span>
+                </div>
             </div>
-            <div class="email">
-                <img src="assets/vector/chat.svg" alt="Маркер">
-                <span>info@lagoda-service.ru</span>
+            <div class="menu__social-net">
+                <img class="social_net__item" src="assets/vector/social-net/whatsApp-dark.svg" alt="WhatsApp">
+                <img class="social_net__item" src="assets/vector/social-net/telegram-dark.svg" alt="Telegram">
+                <img class="social_net__item" src="assets/vector/social-net/VK-dark.svg" alt="VK">
             </div>
-            <div class="phone-number">
-                <img src="assets/vector/telephone.svg" alt="Маркер">
-                <span>8 (985) 622-98-33</span>
-            </div>
-            <div class="get-request">
+
+            <div onclick={} class="menu__get-request">
                 ОСТАВИТЬ ЗАЯВКУ
+
             </div>
+        </section>
     </div>
 </header>
 <section class="content">
@@ -56,6 +101,7 @@
                 <img src="assets/vector/button-prev.svg" alt="Назад">
             </div>
             <div class="container">
+
                 <div class="swiper reviews-swiper">
                     <div class="description">
                         <div class="description-primary">
@@ -72,9 +118,16 @@
                             ОСТАВИТЬ ЗАЯВКУ
                         </div>
                     </a>
-                    <div class="reviews-counter"></div>
+                    <div>
+                        <div class="reviews-counter"></div>
+                    </div>
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" >
+<!--                             style="-->
+<!--                        background-image: url('assets/img/reviews_1.png');-->
+<!--                        background-size: cover;-->
+<!--                        background-position: center;-->
+<!--                        background-repeat: no-repeat;"-->
                             <img src="assets/img/reviews_1.png">
                         </div>
                         <div class="swiper-slide">
@@ -86,15 +139,18 @@
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
+
             </div>
             <div class="swiper-button-next-uniq">
                 <img src="assets/vector/button-next.svg" alt="Вперед">
             </div>
         </section>
         <section class="services">
-            <h1 class="services-description__header">
-                НАШИ УСЛУГИ
-            </h1>
+<!--            <div class="services-description__header-wrapper">-->
+                <div class="services-description__header">
+                    НАШИ УСЛУГИ
+                </div>
+<!--            </div>-->
             <div class="services-description">
                 <div class="services-description__item">
                     Выбор наиболее эффективных способов крепления груза к транспортному средству зависит от типа и состава
@@ -110,7 +166,9 @@
             </div>
             <div class="services__group">
                 <div class="group__item">
-                    <img src="assets/img/Group_1.png" width="370px" height="197px">
+                    <div class="img-wrapper-group" style="background-image: url('assets/img/Group_1.png');">
+<!--                        <img src="assets/img/Group_1.png" height="197px">-->
+                    </div>
                     <div class="group_description__wrapper">
                         <div class="group-description">РАЗРАБОТКА И ПОСТАВКА СИСТЕМ УДЕРЖАНИЯ ГРУЗА И СТЯЖНЫХ РЕМНЕЙ ДЛЯ АВТОТРАНСПОРТА</div>
                         <div class="request-wrapper">
@@ -121,7 +179,9 @@
                     </div>
                 </div>
                 <div class="group__item">
-                    <img src="assets/img/Group_2.png" width="370px" height="197px">
+                    <div class="img-wrapper-group" style="background-image: url('assets/img/Group_2.png');">
+<!--                        <img src="assets/img/Group_2.png" height="197px">-->
+                    </div>
                     <div class="group_description__wrapper">
                         <div class="group-description">РАЗРАБОТКА И ПОСТАВКА ТЕКСТИЛЬНЫХ КРЕПЛЕНИЙ ДЛЯ ЗАКРЕПЛЕНИЯ ГРУЗОВ В Ж/Д ТРАНСПОРТЕ</div>
                         <div class="request-wrapper">
@@ -132,7 +192,9 @@
                     </div>
                 </div>
                 <div class="group__item">
-                    <img src="assets/img/Group_3.png" width="370px" height="197px">
+                    <div class="img-wrapper-group" style="background-image: url('assets/img/Group_3.png');">
+<!--                        <img src="assets/img/Group_3.png" height="197px">-->
+                    </div>
                     <div class="group_description__wrapper">
                         <div class="group-description">РАЗРАБОТКА И ПОСТАВКА ТЕКСТИЛЬНЫХ КРЕПЛЕНИЙ  ДЛЯ ЗАКРЕПЛЕНИЯ ГРУЗОВ В МОРСКИХ СУДАХ</div>
                         <div class="request-wrapper">
@@ -143,7 +205,9 @@
                     </div>
                 </div>
                 <div class="group__item">
-                    <img src="assets/img/Group_4.png" width="370px" height="197px">
+                    <div class="img-wrapper-group" style="background-image: url('assets/img/Group_4.png');">
+<!--                        <img src="assets/img/Group_4.png" height="197px">-->
+                    </div>
                     <div class="group_description__wrapper">
                         <div class="group-description">РАЗРАБОТКА И ПОСТАВКА ПРОКЛАДОЧНЫХ ЭЛЕМЕНТОВ,  РЕЗИНО-КОМПОЗИТНЫХ ИЗДЕЛИЙ</div>
                         <div class="request-wrapper">
@@ -154,9 +218,12 @@
                     </div>
                 </div>
                 <div class="group__item">
-                    <img src="assets/img/Group_5.png" width="370px" height="197px">
+                    <div class="img-wrapper-group"
+                         style="background-image: url('assets/img/Group_5.png');">
+<!--                        <img src="assets/img/Group_5.png" height="197px">-->
+                    </div>
                     <div class="group_description__wrapper">
-                        <div class="group-description">ПРОИЗВОДСТВО БУКСИРОВОЧНЫХ ТРОСОВ</div>
+                        <div class="group-description">ПРОИЗВОДСТВО БУКСИРОВОЧНЫХ ТРОСОВ &nbsp &nbsp &nbsp &nbsp &nbsp</div>
                         <div class="request-wrapper">
                             <div class="group__get-request">
                                 ОСТАВИТЬ ЗАЯВКУ
@@ -165,7 +232,9 @@
                     </div>
                 </div>
                 <div class="group__item">
-                    <img src="assets/img/Group_6.png" width="370px" height="197px">
+                    <div class="img-wrapper-group" style="background-image: url('assets/img/Group_6.png');">
+<!--                        <img src="assets/img/Group_6.png" height="197px">-->
+                    </div>
                     <div class="group_description__wrapper">
                         <div class="group-description">РАЗРАБОТКА И ПОСТАВКА ТЕКСТИЛЬНЫХ СТРОПОВ</div>
                         <div class="request-wrapper">
@@ -182,11 +251,37 @@
                 </div>
             </div>
         </section>
+<!--        <section class="request">-->
+<!--            <div class="request__wrapper">-->
+<!--                <div class="request__title">-->
+<!--                    <div id="main_text_reg">-->
+<!--                        <h3>Запишитесь на чистку ГБЦ &#8212; мы Вам перезвоним!</h3>-->
+<!--                        <form class="check_in" action="" method="post">-->
+<!--                            <label for="name">Имя, Фамилия:</label>-->
+<!--                            <input type="text" name="name" placeholder="Имя Фамилия" value="<?=$_SESSION["name"]?>" />-->
+<!--                            <span><?=$error_name?></span><br/>-->
+<!--                            <label for="tel">Номер тефона:<br /><p>(без пробелов, скобок и дефисов)</p></label>-->
+
+<!--                            <input type="tel" name="tel" placeholder="+79999999999" value="+7" pattern="\+7\s?[0-9]{10}"/>-->
+<!--                            <span><?=$error_tel?></span><br/>-->
+<!--                            <label for="email">Эл. почта:</label>-->
+<!--                            <input type="email" name="email" placeholder="emailadress@example.ru" value="<?=$_SESSION["email"]?>" />-->
+<!--                            <span><?=$error_email?></span><br/>-->
+<!--                            <label for="comment">Комментарии к заявке:</label>-->
+<!--                            <textarea type="text" name="comment" placeholder="Здесь можете указать марку, модель, год выпуска автомобиля и т.д"><?=$_SESSION["comment"]?></textarea><br/>-->
+<!--                            <input type="submit" id="send" name="send" value="Отправить" />-->
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
         <section class="advantages">
             <div class="adv-strap">
                 <img src="assets/img/adv_strap.png" width="621px" height="289px">
             </div>
-            <div class="advantages__header">ПРЕИМУЩЕСТВА</div>
+            <div class="advantages__header-wrapper">
+                <div class="advantages__header">ПРЕИМУЩЕСТВА</div>
+            </div>
             <div class="advantages__group">
                 <div class="advantages__item">
                     <img class="adv_icon" src="assets/vector/briefcase.svg" alt="vector_icon">
@@ -237,192 +332,215 @@
                     деньги, а также минимизируете риски повреждения и потери грузов во время транспортировки.
                     Обращайтесь к нам и мы поможем вам выбрать лучшее решение для вашего бизнеса!
                 </div>
-                <div class="picture-helmet">
-                    <img src="assets/img/helmet.png" alt="Изображение каски">
+                <div class="picture-helmet" style="background-image: url('assets/img/helmet.png')">
+<!--                    <img src="assets/img/helmet.png" alt="Изображение каски">-->
                 </div>
             </div>
         </section>
         <section class="pay-delivery">
-            <div class="pay-delivery__header">ДОСТАВКА И ОПЛАТА</div>
-            <div class="pay-delivery__description">
-                Компания “Лагода Сервис” предлагает для Вашего удобства всевозможные способы доставки оплаты
-            </div>
-            <div class="pay-delivery__options-group">
-                <div class="pay-delivery__option">
-                    <div class="option-title">ТРАНСПОРТНАЯ КОМПАНИЯ</div>
-                    <div class="dlvr-option-description">
-                        Доставка готовой продукции ООО «ЛАДОГА СЕРВИС» осуществляется любым удобным для вас способом.
-                    </div>
-                    <div class="dlvr-option-additional">
-                        <img src="assets/vector/delivery/SDEK.svg">
-                        <img src="assets/vector/delivery/dpd.svg">
-                        <img src="assets/vector/delivery/pochta.svg">
-                        <img src="assets/vector/delivery/delovyi-linii.svg">
-                        <img src="assets/vector/delivery/PEK.svg">
-                    </div>
+            <div class="pay-delivery__wrapper">
+                <div class="pay-delivery__header">ДОСТАВКА И ОПЛАТА</div>
+                <div class="pay-delivery__description">
+                    Компания “Лагода Сервис” предлагает для Вашего удобства всевозможные способы доставки оплаты
                 </div>
-                <div class="pay-delivery__option">
-                    <div class="option-title">СЧЕТ ДЛЯ ЮРИДИЧЕСКИХ ЛИЦ</div>
-                    <div class="dlvr-option-description">
-                        запросите счет для оплаты со счета ООО или ИП. Закрывающие документы мы пришлем Вам с заказом
-                        или по системе ЭДО
-                    </div>
-                    <div class="entity-option-additional">
-                        <div class="folder-icon"><img src="assets/vector/folder.svg"></div>
-                        <div class="request-invoice">
-                            ЗАПРОСИТЬ СЧЕТ
+                <div class="pay-delivery__options-group">
+                    <div class="pay-delivery__option">
+                        <div class="option-title">ТРАНСПОРТНАЯ КОМПАНИЯ</div>
+                        <div class="dlvr-option-description">
+                            Доставка готовой продукции ООО «ЛАДОГА СЕРВИС» осуществляется любым удобным для вас способом.
+                        </div>
+                        <div class="dlvr-option-additional">
+<!--                            <div class="dlvr-option-additional-item" style="background-image: url('assets/vector/delivery/SDEK.svg')"></div>-->
+<!--                            <div class="dlvr-option-additional-item" style="background-image: url('assets/vector/delivery/dpd.svg')"></div>-->
+<!--                            <div class="dlvr-option-additional-item" style="background-image: url('assets/vector/delivery/pochta.svg')"></div>-->
+<!--                            <div class="dlvr-option-additional-item" style="background-image: url('assets/vector/delivery/delovyi-linii.svg')"></div>-->
+<!--                            <div class="dlvr-option-additional-item" style="background-image: url('assets/vector/delivery/PEK.svg')"></div>-->
+                            <img class="option__img-SDEK" src="assets/vector/delivery/SDEK.svg">
+                            <img class="option__img-dpd" src="assets/vector/delivery/dpd.svg">
+                            <img class="option__img-pochta" src="assets/vector/delivery/pochta.svg">
+                            <img class="option__img-delovyi-linii" src="assets/vector/delivery/delovyi-linii.svg">
+                            <img class="option__img-PEK" src="assets/vector/delivery/PEK.svg">
                         </div>
                     </div>
-                </div>
-                <div class="pay-delivery__option">
-                    <div class="option-title">САМОВЫЗОВ СО СКЛАДА</div>
-                    <div class="dlvr-option-description">
-                        Самовывоз возможен со складов наших производств.
+                    <div class="pay-delivery__option">
+                        <div class="option-title">СЧЕТ ДЛЯ ЮРИДИЧЕСКИХ ЛИЦ</div>
+                        <div class="dlvr-option-description">
+                            запросите счет для оплаты со счета ООО или ИП. Закрывающие документы мы пришлем Вам с заказом
+                            или по системе ЭДО
+                        </div>
+                        <div class="entity-option-additional">
+                            <div class="folder-icon"><img src="assets/vector/folder.svg"></div>
+                            <div class="request-invoice">
+                                ЗАПРОСИТЬ СЧЕТ
+                            </div>
+                        </div>
                     </div>
-                    <div class="dlvr-option-additional"></div>
-                </div>
-                <div class="pay-delivery__option">
-                    <div class="option-title">ОПЛАТА ЧЕРЕЗ ПРИЛОЖЕНИЯ БАНКОВ</div>
-                    <div class="dlvr-option-description">
-                        Нет карты под рукой? Оплачивайте через приложение Вашего банка или Систему Быстрых Платежей
+                    <div class="pay-delivery__option">
+                        <div class="option-title">САМОВЫЗОВ СО СКЛАДА</div>
+                        <div class="dlvr-option-description">
+                            Самовывоз возможен со складов наших производств.
+                        </div>
+<!--                        <div class="dlvr-option-additional"></div>-->
                     </div>
-                    <div class="banks-option-additional">
-                        <img src="assets/vector/banks/alpha.svg">
-                        <img src="assets/vector/banks/tinkoff.svg">
-                        <img src="assets/vector/banks/sber.svg">
-                        <img src="assets/vector/banks/sbp.svg">
+                    <div class="pay-delivery__option">
+                        <div class="option-title">ОПЛАТА ЧЕРЕЗ ПРИЛОЖЕНИЯ БАНКОВ</div>
+                        <div class="dlvr-option-description">
+                            Нет карты под рукой? Оплачивайте через приложение Вашего банка или Систему Быстрых Платежей
+                        </div>
+                        <div class="banks-option-additional">
+                            <img src="assets/vector/banks/alpha.svg">
+                            <img src="assets/vector/banks/tinkoff.svg">
+                            <img src="assets/vector/banks/sber.svg">
+                            <img src="assets/vector/banks/sbp.svg">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="about">
-            <div class="about__header">
-                <div class="about-description-wrapper">
-                    <div class="about__title">О КОМПАНИИ</div>
-                    <div class="about__description">
-                        Компания Лагода Сервис является разработчиком новых методов крепления грузов в различных типах
-                        транспорта, с использованием передовых средств крепления, а также подъемно-транспортных
-                        приспособлений.<br/>
-                        Мы стремимся к лидерству на рынке оказания услуг в области разработки решений, связанных с работами
-                        по перемещению, хранению и закреплению груза.<br/>
-                        Обладаем техническим отделом и командой квалифицированных специалистов что позволяет разработать
-                        необходимую документацию и внедрить совершенно новые методы крепления грузов в различных типах
-                        транспорта.
+            <div class="about__wrapper">
+                <div class="about__header">
+                    <div class="about-description-wrapper">
+                        <div class="about__title">О КОМПАНИИ</div>
+                        <div class="about__description-img-mobil" style="background-image: url('assets/img/stock.png')"></div>
+                        <div class="about__description">
+                            Компания Лагода Сервис является разработчиком новых методов крепления грузов в различных типах
+                            транспорта, с использованием передовых средств крепления, а также подъемно-транспортных
+                            приспособлений.<br/>
+                            Мы стремимся к лидерству на рынке оказания услуг в области разработки решений, связанных с работами
+                            по перемещению, хранению и закреплению груза.<br/>
+                            Обладаем техническим отделом и командой квалифицированных специалистов что позволяет разработать
+                            необходимую документацию и внедрить совершенно новые методы крепления грузов в различных типах
+                            транспорта.
+                        </div>
                     </div>
+                    <div class="about__description-img" style="background-image: url('assets/img/stock.png')"></div>
+<!--                    <img width="570px" height="312px" src="assets/img/stock.png" alt="Изображение">-->
                 </div>
-                <img width="570px" height="312px" src="assets/img/stock.png" alt="Изображение">
-            </div>
-            <div class="about__licenses">
-                <div class="licenses__description-wrapper">
-                    <div class="licenses__title">ЛИЦЕНЗИИ И <br/>СЕРТИФИКАТЫ</div>
-                    <div class="licenses__description">
-                        Инновационные средства креплений являются надежным средством крепления грузов, не повреждают их
-                        поверхность или упаковку. Их применение позволяет повысить безопасность перевозки грузов, и
-                        эффективность труда рабочих.
-                        Наша компания обладает всеми необходимыми протоклами и отчетами об испытаниях, а также
-                        сертификатами, подтверждающими качество и безопасность нашей продукции.
-                    </div>
-                </div>
-            </div>
-            <div class="licence">
-                <div class="swiper-button-prev-licence">
-                    <img src="assets/vector/button-prev-white.svg" alt="Назад">
-                </div>
-                <div class="slider-container">
-                    <div class="swiper licence-swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img class="licence-img" src="assets/img/licence_1.png">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="licence-img" src="assets/img/licence_2.png">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="licence-img" src="assets/img/licence_3.png">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="licence-img" src="assets/img/licence_4.png">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="licence-img" src="assets/img/licence_5.png">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="licence-img" src="assets/img/licence_6.png">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="licence-img" src="assets/img/licence_7.png">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="licence-img" src="assets/img/licence_8.png">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="licence-img" src="assets/img/licence_9.png">
-                            </div>
+                <div class="about__licenses">
+                    <div class="licenses__description-wrapper">
+                        <div class="licenses__title">ЛИЦЕНЗИИ И <br/>СЕРТИФИКАТЫ</div>
+                        <div class="licenses__description">
+                            Инновационные средства креплений являются надежным средством крепления грузов, не повреждают их
+                            поверхность или упаковку. Их применение позволяет повысить безопасность перевозки грузов, и
+                            эффективность труда рабочих.
+                            Наша компания обладает всеми необходимыми протоклами и отчетами об испытаниях, а также
+                            сертификатами, подтверждающими качество и безопасность нашей продукции.
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-next-licence">
-                    <img src="assets/vector/button-next-white.svg" alt="Вперед">
+                <div class="licence">
+                    <div class="swiper-button-prev-licence">
+                        <img src="assets/vector/button-prev-white.svg" alt="Назад">
+                    </div>
+                    <div class="slider-container">
+                        <div class="swiper licence-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+<!--                                    <img class="licence-img" src="assets/img/licence_1.png">-->
+                                    <div class="licence-img" style="background-image: url('assets/img/licence_1.png')"></div>
+                                </div>
+                                <div class="swiper-slide">
+<!--                                    <img class="licence-img" src="assets/img/licence_2.png">-->
+                                    <div class="licence-img" style="background-image: url('assets/img/licence_2.png')"></div>
+                                </div>
+                                <div class="swiper-slide">
+<!--                                    <img class="licence-img" src="assets/img/licence_3.png">-->
+                                    <div class="licence-img" style="background-image: url('assets/img/licence_3.png')"></div>
+                                </div>
+                                <div class="swiper-slide">
+<!--                                    <img class="licence-img" src="assets/img/licence_4.png">-->
+                                    <div class="licence-img" style="background-image: url('assets/img/licence_4.png')"></div>
+                                </div>
+                                <div class="swiper-slide">
+<!--                                    <img class="licence-img" src="assets/img/licence_5.png">-->
+                                    <div class="licence-img" style="background-image: url('assets/img/licence_5.png')"></div>
+                                </div>
+                                <div class="swiper-slide">
+<!--                                    <img class="licence-img" src="assets/img/licence_6.png">-->
+                                    <div class="licence-img" style="background-image: url('assets/img/licence_6.png')"></div>
+                                </div>
+                                <div class="swiper-slide">
+<!--                                    <img class="licence-img" src="assets/img/licence_7.png">-->
+                                    <div class="licence-img" style="background-image: url('assets/img/licence_7.png')"></div>
+                                </div>
+                                <div class="swiper-slide">
+<!--                                    <img class="licence-img" src="assets/img/licence_8.png">-->
+                                    <div class="licence-img" style="background-image: url('assets/img/licence_8.png')"></div>
+                                </div>
+                                <div class="swiper-slide">
+<!--                                    <img class="licence-img" src="assets/img/licence_9.png">-->
+                                    <div class="licence-img" style="background-image: url('assets/img/licence_9.png')"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next-licence">
+                        <img src="assets/vector/button-next-white.svg" alt="Вперед">
+                    </div>
                 </div>
             </div>
         </section>
         <section class="price">
-            <div class="price_crane">
-                <img src="assets/img/price_cran.png" width="1140px" height="743px">
-            </div>
-            <div class="price__header-wrapper">
-                <div class="price__header">
-                    Прайсы на стандартную продукцию
+            <div class="price__wrapper">
+                <div class="price_crane" style="background-image: url('assets/img/price_cran.png')">
+<!--                    <img src="assets/img/price_cran.png" width="1140px" height="743px">-->
                 </div>
-                <div class="arrow-wrapper">
-                    <div class="swiper-button-prev-price">
-                        <img src="assets/vector/button-prev-price.svg" alt="Назад">
+                <div class="price__header-wrapper">
+                    <div class="price__header">
+                        Прайсы на стандартную продукцию
                     </div>
-                    <div class="swiper-button-next-price">
-                        <img src="assets/vector/button-next-price.svg" alt="Вперед">
+                    <div class="arrow-wrapper">
+                        <div class="swiper-button-prev-price">
+                            <img src="assets/vector/button-prev-price.svg" alt="Назад">
+                        </div>
+                        <div class="swiper-button-next-price">
+                            <img src="assets/vector/button-next-price.svg" alt="Вперед">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="price__slider">
-                <div class="price-swiper__container">
-                    <div class="swiper price-swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="price-block">
-                                    <div class="price-title">Прайс на стяжные ремни</div>
-                                    <div class="price-description">
-                                        Небольшой текст-описание на несколько строк. Небольшой текст-описание на
-                                        несколько строк. Небольшой текст-описание на несколько строк. Небольшой
-                                        текст-описание на несколько строк. Небольшой текст-описание на несколько строк.
-                                        Небольшой текст-описание на несколько строк.
-                                        Небольшой текст-описание на несколько строк. Небольшой текст-описание на
-                                        несколько строк. Небольшой текст-описание на несколько строк.
+                <div class="price__slider">
+                    <div class="price-swiper__container">
+                        <div class="swiper price-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="price-block">
+                                        <div class="price-title">Прайс на стяжные ремни</div>
+                                        <div class="price-description">
+                                            Небольшой текст-описание на несколько строк. Небольшой текст-описание на
+                                            несколько строк. Небольшой текст-описание на несколько строк. Небольшой
+                                            текст-описание на несколько строк. Небольшой текст-описание на несколько строк.
+                                            Небольшой текст-описание на несколько строк.
+                                            Небольшой текст-описание на несколько строк. Небольшой текст-описание на
+                                            несколько строк. Небольшой текст-описание на несколько строк.
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="price-block">
-                                    <div class="price-title">ПРАЙС НА БУКСИРОВОЧНЫЕ ТРОСЫ</div>
-                                    <div class="price-description">
-                                        Небольшой текст-описание на несколько строк. Небольшой текст-описание на
-                                        несколько строк. Небольшой текст-описание на несколько строк. Небольшой
-                                        текст-описание на несколько строк. Небольшой текст-описание на несколько строк.
-                                        Небольшой текст-описание на несколько строк.
-                                        Небольшой текст-описание на несколько строк. Небольшой текст-описание на
-                                        несколько строк. Небольшой текст-описание на несколько строк.
+                                <div class="swiper-slide">
+                                    <div class="price-block">
+                                        <div class="price-title">ПРАЙС НА БУКСИРОВОЧНЫЕ ТРОСЫ</div>
+                                        <div class="price-description">
+                                            Небольшой текст-описание на несколько строк. Небольшой текст-описание на
+                                            несколько строк. Небольшой текст-описание на несколько строк. Небольшой
+                                            текст-описание на несколько строк. Небольшой текст-описание на несколько строк.
+                                            Небольшой текст-описание на несколько строк.
+                                            Небольшой текст-описание на несколько строк. Небольшой текст-описание на
+                                            несколько строк. Небольшой текст-описание на несколько строк.
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="price-block">
-                                    <div class="price-title">ПРАЙС НА ТЕКСТИЛЬНЫЕ СТРОПЫ</div>
-                                    <div class="price-description">
-                                        Небольшой текст-описание на несколько строк. Небольшой текст-описание на
-                                        несколько строк. Небольшой текст-описание на несколько строк. Небольшой
-                                        текст-описание на несколько строк. Небольшой текст-описание на несколько строк.
-                                        Небольшой текст-описание на несколько строк.
-                                        Небольшой текст-описание на несколько строк. Небольшой текст-описание на
-                                        несколько строк. Небольшой текст-описание на несколько строк.
+                                <div class="swiper-slide">
+                                    <div class="price-block">
+                                        <div class="price-title">ПРАЙС НА ТЕКСТИЛЬНЫЕ СТРОПЫ</div>
+                                        <div class="price-description">
+                                            Небольшой текст-описание на несколько строк. Небольшой текст-описание на
+                                            несколько строк. Небольшой текст-описание на несколько строк. Небольшой
+                                            текст-описание на несколько строк. Небольшой текст-описание на несколько строк.
+                                            Небольшой текст-описание на несколько строк.
+                                            Небольшой текст-описание на несколько строк. Небольшой текст-описание на
+                                            несколько строк. Небольшой текст-описание на несколько строк.
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -432,32 +550,37 @@
             </div>
         </section>
         <section class="contacts">
-            <div class="contacts-block">
-                <div class="contacts__title">КОНТАКТЫ</div>
-                <div class="contacts-wrapper">
-                    <div class="location">
-                        <img src="assets/vector/location_marker.svg" alt="Маркер">
-                        <span>г. Выборг, пр-т. Победы 8, оф. 30</span>
+            <div class="contacts__wrapper">
+                <div class="contacts-block">
+                    <div class="contacts__title">КОНТАКТЫ</div>
+                    <div class="contacts-wrapper">
+                        <div class="location contacts__item">
+                            <img src="assets/vector/location_marker.svg" alt="Маркер">
+                            <span>г. Выборг, пр-т. Победы 8, оф. 30</span>
+                        </div>
+                        <div class="email contacts__item">
+                            <img src="assets/vector/chat.svg" alt="Маркер">
+                            <span>info@lagoda-service.ru</span>
+                        </div>
+                        <div class="phone-number contacts__item">
+                            <img src="assets/vector/telephone.svg" alt="Маркер">
+                            <span>8 (985) 622-98-33</span>
+                        </div>
                     </div>
-                    <div class="email">
-                        <img src="assets/vector/chat.svg" alt="Маркер">
-                        <span>info@lagoda-service.ru</span>
+                    <div class="social-network">
+                        <img src="assets/vector/social-net/VK.svg" alt="VK">
+                        <img src="assets/vector/social-net/whatsApp.svg" alt="WhatsApp">
+                        <img src="assets/vector/social-net/telegram.svg" alt="Telegram">
+                        <img src="assets/vector/social-net/viber.svg" alt="Viber">
                     </div>
-                    <div class="phone-number">
-                        <img src="assets/vector/telephone.svg" alt="Маркер">
-                        <span>8 (985) 622-98-33</span>
-                    </div>
+                    <div class="contacts__get-request">ОСТАВИТЬ ЗАЯВКУ</div>
                 </div>
-                <div class="social-network">
-                    <img src="assets/vector/social-net/VK.svg" alt="VK">
-                    <img src="assets/vector/social-net/whatsApp.svg" alt="WhatsApp">
-                    <img src="assets/vector/social-net/telegram.svg" alt="Telegram">
-                    <img src="assets/vector/social-net/viber.svg" alt="Viber">
-                </div>
-                <div class="contacts__get-request">ОСТАВИТЬ ЗАЯВКУ</div>
             </div>
             <div class="map">
                 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5751687ceef4f3c8333704cd4fda34445a68066954b89e05d71da109e985cc56&amp;width=773&amp;height=484&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+            <div class="map-mobile">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9986977ab66072e869330da19f1851de5787af7ddcec0b33f0c6f423eb9ba263&amp;width=320&amp;height=374&amp;lang=ru_RU&amp;scroll=true"></script>
             </div>
         </section>
     </div>
@@ -476,6 +599,52 @@
 <!--        </div>-->
 <!--    </div>-->
 <!--</section>-->
+<section class="footer-mobile">
+    <div class="footer-wrapper">
+        <div class="footer__inner">
+            <div class="footer__logo-wrapper">
+                <img class="footer__logo" src="assets/vector/logo.svg" alt="Логотип">
+            </div>
+            <div class="footer__card-wrapper">
+                    <div class="footer__site-card">
+                        <div class="site-map__item" onclick={document.querySelector(".services").scrollIntoView({behavior:"smooth"})}>Наши услуги</div>
+                        <div class="site-map__item" onclick={document.querySelector(".advantages").scrollIntoView({behavior:"smooth"})}>Преимущества</div>
+                        <div class="site-map__item" onclick={document.querySelector(".pay-delivery").scrollIntoView({behavior:"smooth"})}>Доставка и оплата</div>
+                        <div class="site-map__item" onclick={document.querySelector(".about").scrollIntoView({behavior:"smooth"})}>О компании</div>
+                    </div>
+                    <div class="footer__site-card">
+                        <div class="site-map__item" onclick={document.querySelector(".about__licenses").scrollIntoView({behavior:"smooth"})}>Лицензии и сертификаты</div>
+                        <div class="site-map__item" onclick={document.querySelector(".price").scrollIntoView({behavior:"smooth"})}>Прайсы на продукцию</div>
+                        <div class="site-map__item" onclick={document.querySelector(".contacts").scrollIntoView({behavior:"smooth"})}>Котнтакты</div>
+                    </div>
+            </div>
+            <div class="rights">Все права защищены.<br/>
+                Политика конфиденциальности</div>
+            <div class="footer__fourth-column">
+                <div class="footer__contacts">
+                    <div class="footer__contacts-item">
+                        <img src="assets/vector/location_marker.svg" alt="Маркер">
+                        <span>г. Выборг, пр-т. Победы 8, оф. 30</span>
+                    </div>
+                    <div class="footer__contacts-item">
+                        <img src="assets/vector/chat.svg" alt="Маркер">
+                        <span>info@lagoda-service.ru</span>
+                    </div>
+                    <div class="footer__contacts-item">
+                        <img src="assets/vector/telephone.svg" alt="Маркер">
+                        <span>8 (985) 622-98-33</span>
+                    </div>
+                </div>
+                <div class="footer__social-net">
+                    <img class="social_net__item" src="assets/vector/social-net/whatsApp-dark.svg" alt="WhatsApp">
+                    <img class="social_net__item" src="assets/vector/social-net/telegram-dark.svg" alt="Telegram">
+                    <img class="social_net__item" src="assets/vector/social-net/VK-dark.svg" alt="VK">
+                </div>
+            </div>
+            <div class="footer__get-request">ОСТАВИТЬ ЗАЯВКУ</div>
+        </div>
+    </div>
+</section>
 <footer>
     <div class="footer-wrapper">
         <div class="footer__inner">
@@ -486,18 +655,18 @@
             </div>
             <div class="footer__second-column">
                 <div class="footer__site-card">
-                    <div class="site-map__item">Наши услуги</div>
-                    <div class="site-map__item">Преимущества</div>
-                    <div class="site-map__item">Доставка и оплата</div>
-                    <div class="site-map__item">О компании</div>
+                    <div class="site-map__item" onclick={document.querySelector(".services").scrollIntoView({behavior:"smooth"})}>Наши услуги</div>
+                    <div class="site-map__item" onclick={document.querySelector(".advantages").scrollIntoView({behavior:"smooth"})}>Преимущества</div>
+                    <div class="site-map__item" onclick={document.querySelector(".pay-delivery").scrollIntoView({behavior:"smooth"})}>Доставка и оплата</div>
+                    <div class="site-map__item" onclick={document.querySelector(".about").scrollIntoView({behavior:"smooth"})}>О компании</div>
                 </div>
                 <div class="footer__get-request">ОСТАВИТЬ ЗАЯВКУ</div>
             </div>
             <div class="footer__third-column">
                 <div class="footer__site-card">
-                    <div class="site-map__item">Лицензии и сертификаты</div>
-                    <div class="site-map__item">Прайсы на продукцию</div>
-                    <div class="site-map__item">Котнтакты</div>
+                    <div class="site-map__item" onclick={document.querySelector(".about__licenses").scrollIntoView({behavior:"smooth"})}>Лицензии и сертификаты</div>
+                    <div class="site-map__item" onclick={document.querySelector(".price").scrollIntoView({behavior:"smooth"})}>Прайсы на продукцию</div>
+                    <div class="site-map__item" onclick={document.querySelector(".contacts").scrollIntoView({behavior:"smooth"})}>Котнтакты</div>
                 </div>
             </div>
             <div class="footer__fourth-column">
@@ -529,5 +698,4 @@
 <script src="js/modal.min.js"></script>
 <script src="js/script.js"></script>
 </body>
-
 </html>

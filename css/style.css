@@ -13,3 +13,7 @@ body {
     margin: 0;
     background-color: #fcf3f0;
 }
+
+html, body {
+    height: 100%;
+}
